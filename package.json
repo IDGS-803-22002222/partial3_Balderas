@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^4.0.14"
+  },
+  "name": "examen2doparcial",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.14",
+    "examen2doparcial": "file:",
+    "flowbite": "^3.1.2"
+  }
+}
