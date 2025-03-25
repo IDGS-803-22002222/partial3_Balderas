@@ -50,3 +50,26 @@ class login(FlaskForm):
 	contra = StringField("Contraseña: ",[
 		validators.DataRequired(message="El campo de busqueda es requerido")
 	])
+
+
+class RegistroForm(FlaskForm):
+    nombre = StringField("Nombre completo:", [
+        validators.DataRequired(message="El campo nombre es requerido"),
+        validators.Length(min=3, max=100)
+    ])
+    usuario = StringField("Usuario:", [
+        validators.DataRequired(message="El campo usuario es requerido"),
+        validators.Length(min=3, max=50)
+    ])
+    correo = EmailField("Correo electrónico:", [
+        validators.DataRequired(message="El campo correo es requerido"),
+        validators.Email(message="Ingrese un correo válido")
+    ])
+    contra = PasswordField("Contraseña:", [
+        validators.DataRequired(message="La contraseña es requerida"),
+        validators.Length(min=6, message="La contraseña debe tener al menos 6 caracteres")
+    ])
+    confirm_contra = PasswordField("Confirmar contraseña:", [
+        validators.DataRequired(message="Debe confirmar la contraseña"),
+        validators.EqualTo('contra', message="Las contraseñas no coinciden")
+    ])
